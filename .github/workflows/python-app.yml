@@ -33,7 +33,7 @@ jobs:
         whereis robot
         pwd
         wget https://chromedriver.storage.googleapis.com/107.0.5304.62/chromedriver_linux64.zip -P ~
-        unzip ../chromedriver_linux64.zip -d /usr/local/bin
+        unzip ~/chromedriver_linux64.zip -d /usr/local/bin
     - name: Test with pytest
       run: |
         robot -d Results/Cataloge -i 3 Tests/Cataloge/T_CT_HomePage.robot
