@@ -1,0 +1,12 @@
+Project Key,"Test 
+ID",Test Type,Summary,Actions,Link
+DEM,1,Manual,Starting_Page is matching the UX Design,"Click login
+enter password",DEM-14
+DEM,2,Manual,Starting_Page_User Reviewing the Services is matching the UX Design,"Click login
+enter password",DEM-14
+DEM,3,Manual,Activation_Page all fields are working correctly and matching the UX Design,"Click login
+enter password",DEM-14
+DEM,4,Manual,Activation_Page all fields has help hover button to show helping tips for every field,"Click login
+enter password",DEM-14
+DEM,5,Manual,Activation_Page Error msgs are Appearing correclty as expected when not entering the valid values in the fields,"Click login
+enter password",DEM-14

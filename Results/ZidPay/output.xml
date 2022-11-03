@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.1 (Python 3.9.7 on win32)" generated="20211027 18:56:24.296" rpa="false" schemaversion="2">
+<suite id="s1" name="T ZDP ActivationMain" source="F:\WORK\Makan Gdeed\Zid_Automation_Framework\Tests\Zidpay\T_ZDP_ActivationMain.Robot">
+<test id="s1-t1" name="ZidPay Activation">
+<kw name="Start WebTest" library="Common" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20211027 18:56:24.454" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20211027 18:56:24.454" endtime="20211027 18:56:25.613"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20211027 18:56:25.613" endtime="20211027 18:56:25.729"/>
+</kw>
+<status status="PASS" starttime="20211027 18:56:24.454" endtime="20211027 18:56:25.729"/>
+</kw>
+<kw name="LoginToMD" library="P_MD_Login">
+<kw name="GoTo MD LoginPage" library="P_MD_Login">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${MD_STAGING_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20211027 18:56:25.730" level="INFO">Opening url 'https://staging-web.zid.sa/login'</msg>
+<status status="PASS" starttime="20211027 18:56:25.730" endtime="20211027 18:56:27.906"/>
+</kw>
+<status status="PASS" starttime="20211027 18:56:25.730" endtime="20211027 18:56:27.906"/>
+</kw>
+<kw name="Enter Email" library="P_MD_Login">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${EMAIL_FIELD}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211027 18:56:27.907" endtime="20211027 18:56:27.926"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${EMAIL_FIELD}</arg>
+<arg>${EMAIL}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211027 18:56:27.927" level="INFO">Typing text 'sibog38128@forfity.com' into text field 'email'.</msg>
+<status status="PASS" starttime="20211027 18:56:27.926" endtime="20211027 18:56:27.994"/>
+</kw>
+<status status="PASS" starttime="20211027 18:56:27.906" endtime="20211027 18:56:27.994"/>
+</kw>
+<kw name="Enter Password" library="P_MD_Login">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${PASSOWRD_FIELD}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211027 18:56:27.994" endtime="20211027 18:56:28.011"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${PASSOWRD_FIELD}</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211027 18:56:28.012" level="INFO">Typing text '12345678' into text field 'password'.</msg>
+<status status="PASS" starttime="20211027 18:56:28.011" endtime="20211027 18:56:28.064"/>
+</kw>
+<status status="PASS" starttime="20211027 18:56:27.994" endtime="20211027 18:56:28.064"/>
+</kw>
+<kw name="Click Login" library="P_MD_Login">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${LOGIN_BTN}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20211027 18:56:28.065" level="INFO">Clicking button 'xpath=//*[@id="form-login"]/button'.</msg>
+<status status="PASS" starttime="20211027 18:56:28.065" endtime="20211027 18:56:29.481"/>
+</kw>
+<status status="PASS" starttime="20211027 18:56:28.064" endtime="20211027 18:56:29.481"/>
+</kw>
+<status status="PASS" starttime="20211027 18:56:25.729" endtime="20211027 18:56:29.481"/>
+</kw>
+<kw name="GoTo ZidPayDashboard" library="P_MD_SideMenu">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${MD_SideMenu_Payment_DDP}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211027 18:56:29.482" endtime="20211027 18:56:29.508"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>${MD_SideMenu_Payment_DDP}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20211027 18:56:29.508" level="INFO">Clicking link 'xpath= //a[./span='الدفع']'.</msg>
+<status status="PASS" starttime="20211027 18:56:29.508" endtime="20211027 18:56:29.561"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${MD_SideMenu_ZidPay_BTN}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211027 18:56:29.561" endtime="20211027 18:56:29.832"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>${MD_SideMenu_ZidPay_BTN}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20211027 18:56:29.833" level="INFO">Clicking link 'xpath= //a[./span='زد باي']'.</msg>
+<status status="PASS" starttime="20211027 18:56:29.832" endtime="20211027 18:56:29.877"/>
+</kw>
+<status status="PASS" starttime="20211027 18:56:29.482" endtime="20211027 18:56:29.877"/>
+</kw>
+<kw name="Click On Activate Zidpay Now" library="P_ZDP_MarketingPage">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${activatezidpay_btn}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211027 18:56:29.878" endtime="20211027 18:56:30.555"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${activatezidpay_btn}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20211027 18:56:30.555" endtime="20211027 18:56:30.846"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${activatezidpay_btn}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20211027 18:56:30.846" level="INFO">Clicking button 'xpath=.//div[@class="bc430fd7"]/button'.</msg>
+<status status="PASS" starttime="20211027 18:56:30.846" endtime="20211027 18:56:30.886"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211027 18:56:32.893" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20211027 18:56:30.887" endtime="20211027 18:56:32.894"/>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${IsElementVisible}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${ActivateZidpayAndDisableOtherNetworks}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${ActivateZidpayAndDisableOtherNetworks}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20211027 18:56:33.036" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-18.png"&gt;&lt;img src="selenium-screenshot-18.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20211027 18:56:32.905" endtime="20211027 18:56:33.036"/>
+</kw>
+<msg timestamp="20211027 18:56:33.038" level="FAIL">Element with locator 'xpath=.//div[@id='app']//footer/button[1]' not found.</msg>
+<status status="FAIL" starttime="20211027 18:56:32.894" endtime="20211027 18:56:33.038"/>
+</kw>
+<msg timestamp="20211027 18:56:33.038" level="INFO">${IsElementVisible} = False</msg>
+<status status="PASS" starttime="20211027 18:56:32.894" endtime="20211027 18:56:33.038"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${IsElementVisible}</arg>
+<arg>CLICK ELEMENT</arg>
+<arg>${ActivateZidpayAndDisableOtherNetworks}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20211027 18:56:33.038" endtime="20211027 18:56:33.038"/>
+</kw>
+<status status="PASS" starttime="20211027 18:56:29.878" endtime="20211027 18:56:33.038"/>
+</kw>
+<kw name="Choose Number Of Transactions" library="P_ZDP_Activation">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${NOOFTRANSACTIONS_BTN}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211027 18:56:33.039" endtime="20211027 18:56:33.057"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${NOOFTRANSACTIONS_BTN}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20211027 18:56:33.057" endtime="20211027 18:56:33.344"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${NoOfTransactions_btn}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20211027 18:56:33.344" level="INFO">Clicking button 'xpath=(.//div[@class='ecbd034a']//button)[1]'.</msg>
+<status status="PASS" starttime="20211027 18:56:33.344" endtime="20211027 18:56:33.384"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${NoOfTransaction}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211027 18:56:33.384" endtime="20211027 18:56:33.398"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${NoOfTransaction}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211027 18:56:33.399" level="INFO">Clicking element 'xpath=.//div[contains(text(),'50-200 عملية')]'.</msg>
+<status status="PASS" starttime="20211027 18:56:33.399" endtime="20211027 18:56:33.431"/>
+</kw>
+<status status="PASS" starttime="20211027 18:56:33.039" endtime="20211027 18:56:33.431"/>
+</kw>
+<kw name="Choose Volume Of Transactions" library="P_ZDP_Activation">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${volumeoftransactions_btn}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20211027 18:56:33.432" endtime="20211027 18:56:33.717"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${volumeoftransactions_btn}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20211027 18:56:33.718" level="INFO">Clicking button 'xpath=(.//div[@class='ecbd034a']//button)[2]'.</msg>
+<status status="PASS" starttime="20211027 18:56:33.717" endtime="20211027 18:56:33.760"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${volumeoftransactions}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211027 18:56:33.760" endtime="20211027 18:56:33.775"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${volumeoftransactions}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211027 18:56:33.775" level="INFO">Clicking element 'xpath=.//div[contains(text(),'7,000 - 14,000 ريال')]'.</msg>
+<status status="PASS" starttime="20211027 18:56:33.775" endtime="20211027 18:56:33.805"/>
+</kw>
+<status status="PASS" starttime="20211027 18:56:33.431" endtime="20211027 18:56:33.805"/>
+</kw>
+<kw name="Choose The Bank Account" library="P_ZDP_Activation">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${BankAccounts_btn}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20211027 18:56:33.805" endtime="20211027 18:56:34.095"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${BankAccounts_btn}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20211027 18:56:34.095" level="INFO">Clicking button 'xpath=.//button[./span[contains(text(),'اختر الحساب البنكي')]]'.</msg>
+<status status="PASS" starttime="20211027 18:56:34.095" endtime="20211027 18:56:34.139"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${FirstBankAccountOnList}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211027 18:56:34.140" endtime="20211027 18:56:34.158"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${FirstBankAccountOnList}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211027 18:56:34.158" level="INFO">Clicking element 'xpath=.//div[@class='_6ce71ae5 e279cbe1 aab4f354 _51d20fc9']/div[1]'.</msg>
+<status status="PASS" starttime="20211027 18:56:34.158" endtime="20211027 18:56:34.188"/>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${IsElementVisible}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${BankAccountOwnerInArabicMsg}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${BankAccountOwnerInArabicMsg}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20211027 18:56:34.386" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-19.png"&gt;&lt;img src="selenium-screenshot-19.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20211027 18:56:34.198" endtime="20211027 18:56:34.386"/>
+</kw>
+<msg timestamp="20211027 18:56:34.386" level="FAIL">Element with locator 'xpath=.//div[@class='ade08c5f']/div[./*]' not found.</msg>
+<status status="FAIL" starttime="20211027 18:56:34.189" endtime="20211027 18:56:34.386"/>
+</kw>
+<msg timestamp="20211027 18:56:34.387" level="INFO">${IsElementVisible} = False</msg>
+<status status="PASS" starttime="20211027 18:56:34.188" endtime="20211027 18:56:34.387"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${IsElementVisible}</arg>
+<arg>INPUT TEXT</arg>
+<arg>${UpdateAccountName_input}</arg>
+<arg>${NewEnglishName}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20211027 18:56:34.387" endtime="20211027 18:56:34.387"/>
+</kw>
+<status status="PASS" starttime="20211027 18:56:33.805" endtime="20211027 18:56:34.387"/>
+</kw>
+<kw name="AcceptTermsAndContions" library="P_ZDP_Activation">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${ConditionsAndTerms_CB}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20211027 18:56:34.389" endtime="20211027 18:56:34.679"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${conditionsandterms_cb}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211027 18:56:34.679" endtime="20211027 18:56:34.694"/>
+</kw>
+<kw name="Element Attribute Value Should Be" library="SeleniumLibrary">
+<arg>${ConditionsAndTerms_CB}</arg>
+<arg>value</arg>
+<arg>false</arg>
+<doc>Verifies element identified by ``locator`` contains expected attribute value.</doc>
+<msg timestamp="20211027 18:56:34.704" level="INFO">Element 'xpath=.//div[@class='a9d9f8af']//input[@type='checkbox']' attribute 'value' contains value 'false'.</msg>
+<status status="PASS" starttime="20211027 18:56:34.694" endtime="20211027 18:56:34.705"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${ConditionsAndTerms_CB}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211027 18:56:34.705" level="INFO">Clicking element 'xpath=.//div[@class='a9d9f8af']//input[@type='checkbox']'.</msg>
+<status status="PASS" starttime="20211027 18:56:34.705" endtime="20211027 18:56:34.741"/>
+</kw>
+<status status="PASS" starttime="20211027 18:56:34.387" endtime="20211027 18:56:34.741"/>
+</kw>
+<kw name="Click On Activation Button" library="P_ZDP_Activation">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${activation_btn}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211027 18:56:34.742" endtime="20211027 18:56:34.762"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${activation_btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211027 18:56:34.763" level="INFO">Clicking element 'xpath=.//div[@class='a9d9f8af']/button'.</msg>
+<status status="PASS" starttime="20211027 18:56:34.762" endtime="20211027 18:56:34.796"/>
+</kw>
+<status status="PASS" starttime="20211027 18:56:34.741" endtime="20211027 18:56:34.797"/>
+</kw>
+<kw name="Verify that Activation is done successfully" library="P_ZDP_Landing">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${AfterActivationMsg}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20211027 18:56:39.984" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-20.png"&gt;&lt;img src="selenium-screenshot-20.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20211027 18:56:39.846" endtime="20211027 18:56:39.984"/>
+</kw>
+<msg timestamp="20211027 18:56:39.985" level="FAIL">Element 'xpath=.//div[@class='ade08c5f']' not visible after 5 seconds.</msg>
+<status status="FAIL" starttime="20211027 18:56:34.797" endtime="20211027 18:56:39.985"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>يمكنك الآن استقبال عمليات الدفع الإلكترونى عن طريق</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="NOT RUN" starttime="20211027 18:56:39.985" endtime="20211027 18:56:39.985"/>
+</kw>
+<status status="FAIL" starttime="20211027 18:56:34.797" endtime="20211027 18:56:39.986"/>
+</kw>
+<kw name="End WebTest" library="Common" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20211027 18:56:39.987" endtime="20211027 18:56:42.091"/>
+</kw>
+<status status="PASS" starttime="20211027 18:56:39.987" endtime="20211027 18:56:42.091"/>
+</kw>
+<doc>Zidpay Activation Positive Scenario</doc>
+<status status="FAIL" starttime="20211027 18:56:24.454" endtime="20211027 18:56:42.092">Element 'xpath=.//div[@class='ade08c5f']' not visible after 5 seconds.</status>
+</test>
+<status status="FAIL" starttime="20211027 18:56:24.297" endtime="20211027 18:56:42.094"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="T ZDP ActivationMain">T ZDP ActivationMain</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

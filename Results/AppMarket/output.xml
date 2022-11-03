@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.1 (Python 3.9.7 on win32)" generated="20211102 15:58:13.729" rpa="false" schemaversion="2">
+<suite id="s1" name="T APPMarket DEMO" source="F:\WORK\Makan Gdeed\Zid_Automation_Framework\Tests\APPMarket\T_APPMarket_DEMO.robot">
+<test id="s1-t1" name="PublishAppByAdminE2E">
+<kw name="Start WebTest" library="Common" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20211102 15:58:13.888" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20211102 15:58:13.888" endtime="20211102 15:58:15.002"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20211102 15:58:15.002" endtime="20211102 15:58:15.124"/>
+</kw>
+<status status="PASS" starttime="20211102 15:58:13.888" endtime="20211102 15:58:15.124"/>
+</kw>
+<kw name="GoTo PD LoginPage" library="P_PartnerDashboard_Login">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${PD_STAGING_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20211102 15:58:15.125" level="INFO">Opening url 'https://staging-api.zid.sa/app'</msg>
+<status status="PASS" starttime="20211102 15:58:15.125" endtime="20211102 15:58:16.994"/>
+</kw>
+<status status="PASS" starttime="20211102 15:58:15.125" endtime="20211102 15:58:16.994"/>
+</kw>
+<kw name="Enter Email" library="P_PartnerDashboard_Login">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${PD_Login_Form}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211102 15:58:16.995" endtime="20211102 15:58:17.020"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${PD_Email_Field}</arg>
+<arg>${PD_Email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211102 15:58:17.020" level="INFO">Typing text 'admin@admin.com' into text field 'id:email_2'.</msg>
+<status status="PASS" starttime="20211102 15:58:17.020" endtime="20211102 15:58:17.092"/>
+</kw>
+<status status="PASS" starttime="20211102 15:58:16.994" endtime="20211102 15:58:17.092"/>
+</kw>
+<kw name="Enter Password" library="P_PartnerDashboard_Login">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${PD_Password_Field}</arg>
+<arg>${PD_Passowrd}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211102 15:58:17.093" level="INFO">Typing text 'admin@admin.com' into text field 'id:password_2'.</msg>
+<status status="PASS" starttime="20211102 15:58:17.093" endtime="20211102 15:58:17.153"/>
+</kw>
+<status status="PASS" starttime="20211102 15:58:17.093" endtime="20211102 15:58:17.153"/>
+</kw>
+<kw name="Click Login" library="P_PartnerDashboard_Login">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${PD_Login_Btn}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20211102 15:58:17.154" level="INFO">Clicking button '//button[@type='submit']'.</msg>
+<status status="PASS" starttime="20211102 15:58:17.154" endtime="20211102 15:58:19.152"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Applications</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20211102 15:58:19.152" endtime="20211102 15:58:19.164"/>
+</kw>
+<status status="PASS" starttime="20211102 15:58:17.154" endtime="20211102 15:58:19.164"/>
+</kw>
+<kw name="ClickCreatNewAPP" library="P_PartnerDashboard_ِApps">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Ctreat_APP_Btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211102 15:58:19.165" level="INFO">Clicking element '//a[@class='btn btn-light']'.</msg>
+<status status="PASS" starttime="20211102 15:58:19.165" endtime="20211102 15:58:19.465"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Create new application</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20211102 15:58:19.466" endtime="20211102 15:58:19.478"/>
+</kw>
+<status status="PASS" starttime="20211102 15:58:19.165" endtime="20211102 15:58:19.478"/>
+</kw>
+<kw name="EnterAppName" library="P_PartnerDashboard_CreatAppPage1">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${AppNameField}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211102 15:58:19.479" endtime="20211102 15:58:19.498"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${AppNameField}</arg>
+<arg>${AppName}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211102 15:58:19.498" level="INFO">Typing text '1AaggamyTestz' into text field 'appName'.</msg>
+<status status="PASS" starttime="20211102 15:58:19.498" endtime="20211102 15:58:19.566"/>
+</kw>
+<status status="PASS" starttime="20211102 15:58:19.479" endtime="20211102 15:58:19.566"/>
+</kw>
+<kw name="EnterAppUrl" library="P_PartnerDashboard_CreatAppPage1">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${AppUrlField}</arg>
+<arg>${AppUrl}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211102 15:58:19.567" level="INFO">Typing text 'https://www.google.com/' into text field 'appURL'.</msg>
+<status status="PASS" starttime="20211102 15:58:19.567" endtime="20211102 15:58:19.636"/>
+</kw>
+<status status="PASS" starttime="20211102 15:58:19.567" endtime="20211102 15:58:19.637"/>
+</kw>
+<kw name="SelectAppType" library="P_PartnerDashboard_CreatAppPage1">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${AppTypeDDB}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211102 15:58:19.638" level="INFO">Clicking element '//select[@id='type']'.</msg>
+<status status="PASS" starttime="20211102 15:58:19.637" endtime="20211102 15:58:19.680"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//option[contains(text(),'${AppType}')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211102 15:58:19.681" level="INFO">Clicking element '//option[contains(text(),'Head Script')]'.</msg>
+<status status="PASS" starttime="20211102 15:58:19.680" endtime="20211102 15:58:19.708"/>
+</kw>
+<status status="PASS" starttime="20211102 15:58:19.637" endtime="20211102 15:58:19.708"/>
+</kw>
+<kw name="EnterAppCallBackUrl" library="P_PartnerDashboard_CreatAppPage1">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${CallBackUrlField}</arg>
+<arg>${CallBackUrl}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211102 15:58:19.709" level="INFO">Typing text 'https://www.google.com/' into text field '//input[@name='redirect_uri']'.</msg>
+<status status="PASS" starttime="20211102 15:58:19.709" endtime="20211102 15:58:19.798"/>
+</kw>
+<status status="PASS" starttime="20211102 15:58:19.709" endtime="20211102 15:58:19.798"/>
+</kw>
+<kw name="ClickCreatAppBtn" library="P_PartnerDashboard_CreatAppPage1">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${CreateAppBtn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211102 15:58:19.799" level="INFO">Clicking element '//div[@class='ml-auto']'.</msg>
+<status status="PASS" starttime="20211102 15:58:19.798" endtime="20211102 15:58:20.365"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>General Settings</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20211102 15:58:20.383" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=95.0.4638.69)
+</msg>
+<status status="FAIL" starttime="20211102 15:58:20.366" endtime="20211102 15:58:20.383"/>
+</kw>
+<msg timestamp="20211102 15:58:20.383" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=95.0.4638.69)
+</msg>
+<msg timestamp="20211102 15:58:20.405" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=95.0.4638.69)
+</msg>
+<status status="FAIL" starttime="20211102 15:58:20.365" endtime="20211102 15:58:20.405"/>
+</kw>
+<status status="FAIL" starttime="20211102 15:58:19.798" endtime="20211102 15:58:20.406"/>
+</kw>
+<kw name="EnterRedirectionUrl" library="P_PartnerDashboard_CreatApp_AppInfo">
+<status status="NOT RUN" starttime="20211102 15:58:20.407" endtime="20211102 15:58:20.407"/>
+</kw>
+<kw name="EnterAppLongDescription" library="P_PartnerDashboard_CreatApp_AppInfo">
+<status status="NOT RUN" starttime="20211102 15:58:20.407" endtime="20211102 15:58:20.407"/>
+</kw>
+<kw name="EnterAppshortDescription" library="P_PartnerDashboard_CreatApp_AppInfo">
+<status status="NOT RUN" starttime="20211102 15:58:20.407" endtime="20211102 15:58:20.407"/>
+</kw>
+<kw name="ClickReadyForProductionCheckBox" library="P_PartnerDashboard_CreatApp_AppInfo">
+<status status="NOT RUN" starttime="20211102 15:58:20.408" endtime="20211102 15:58:20.408"/>
+</kw>
+<kw name="ClicksaveAppBtn" library="P_PartnerDashboard_CreatApp_AppInfo">
+<status status="NOT RUN" starttime="20211102 15:58:20.408" endtime="20211102 15:58:20.408"/>
+</kw>
+<kw name="ClickAppsManagement" library="P_PartnerDashboard_SidebarMenu">
+<status status="NOT RUN" starttime="20211102 15:58:20.408" endtime="20211102 15:58:20.408"/>
+</kw>
+<kw name="SearchForAppByName" library="P_PartnerDashboard_AppsMangement">
+<status status="NOT RUN" starttime="20211102 15:58:20.409" endtime="20211102 15:58:20.409"/>
+</kw>
+<kw name="ChangeAppStatusByAdmin" library="P_PartnerDashboard_AdminAppInfo">
+<status status="NOT RUN" starttime="20211102 15:58:20.409" endtime="20211102 15:58:20.409"/>
+</kw>
+<kw name="ClickAppsManagement" library="P_PartnerDashboard_SidebarMenu">
+<status status="NOT RUN" starttime="20211102 15:58:20.409" endtime="20211102 15:58:20.409"/>
+</kw>
+<kw name="VerifyAppStatus" library="P_PartnerDashboard_AppsMangement">
+<status status="NOT RUN" starttime="20211102 15:58:20.409" endtime="20211102 15:58:20.409"/>
+</kw>
+<kw name="End WebTest" library="Common" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20211102 15:58:20.410" endtime="20211102 15:58:22.466"/>
+</kw>
+<status status="PASS" starttime="20211102 15:58:20.410" endtime="20211102 15:58:22.466"/>
+</kw>
+<doc>This E2E PublishAppByAdminE2E.robot</doc>
+<tag>DEMO</tag>
+<status status="FAIL" starttime="20211102 15:58:13.887" endtime="20211102 15:58:22.466">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=95.0.4638.69)
+</status>
+</test>
+<doc>Registration Script</doc>
+<status status="FAIL" starttime="20211102 15:58:13.731" endtime="20211102 15:58:22.468"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">DEMO</stat>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="T APPMarket DEMO">T APPMarket DEMO</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20211102 15:58:20.383" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=95.0.4638.69)
+</msg>
+</errors>
+</robot>

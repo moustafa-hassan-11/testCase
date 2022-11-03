@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.1 (Python 3.9.9 on win32)" generated="20220126 11:14:36.860" rpa="false" schemaversion="2">
+<suite id="s1" name="T Zidship SmokeTest" source="C:\Users\Abdelrahman Tarek\Desktop\New folder\Zid_Automation_Framework\Tests\ZidShip\T_Zidship_SmokeTest.robot">
+<test id="s1-t1" name="Zidship">
+<kw name="Start WebTest" library="Common" type="SETUP">
+<doc>login to MD-&gt; MD , url environment , email &amp; password // Open url to regiter -&gt; REG</doc>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220126 11:14:37.193" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20220126 11:14:37.193" endtime="20220126 11:14:39.163"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220126 11:14:39.164" endtime="20220126 11:14:39.290"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${Navigation_List}[0]' == 'MD'</arg>
+<arg>Common.LoginTo_MD</arg>
+<arg>${Navigation_List}[1]</arg>
+<arg>${Navigation_List}[2]</arg>
+<arg>${Navigation_List}[3]</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<msg timestamp="20220126 11:14:39.293" level="FAIL">List '${Navigation_List}' has no item in index 0.</msg>
+<status status="FAIL" starttime="20220126 11:14:39.291" endtime="20220126 11:14:39.293"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${Navigation_List}[0]' == 'REG'</arg>
+<arg>GoTo MD LoginPage</arg>
+<arg>${Navigation_List}[1]</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="NOT RUN" starttime="20220126 11:14:39.295" endtime="20220126 11:14:39.295"/>
+</kw>
+<status status="FAIL" starttime="20220126 11:14:37.192" endtime="20220126 11:14:39.296"/>
+</kw>
+<kw name="End WebTest" library="Common" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220126 11:14:39.299" endtime="20220126 11:14:41.451"/>
+</kw>
+<status status="PASS" starttime="20220126 11:14:39.298" endtime="20220126 11:14:41.452"/>
+</kw>
+<doc>Smoke Test for Zidship</doc>
+<tag>Smoke</tag>
+<status status="FAIL" starttime="20220126 11:14:37.191" endtime="20220126 11:14:41.453">Setup failed:
+List '${Navigation_List}' has no item in index 0.</status>
+</test>
+<status status="FAIL" starttime="20220126 11:14:36.862" endtime="20220126 11:14:41.460"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">Smoke</stat>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="T Zidship SmokeTest">T Zidship SmokeTest</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
