@@ -36,4 +36,5 @@ jobs:
         unzip ~/chromedriver_linux64.zip -d /usr/local/bin
     - name: Test with pytest
       run: |
+        ls -l 
         robot -d Results\Cataloge  .\Tests\Cataloge
